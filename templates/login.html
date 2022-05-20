@@ -1,6 +1,31 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="loginform">
+        <h4>Welcome back, please login to proceed</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" name="useremail" id="useremail" class="form-control shadow-none" placeholder="Enter usermane">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control shadow-none" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <p><input type="checkbox" name="remeberme" id="remeberme">Remember me.</p>
+                <a href="">forget password?</a>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" id="submitbtn">
+            </div>     
+            <div class="form-group">
+                <p>Dont have account yet? <a href="">signup</a></p>
+            </div>   
+        </form>
+    </div>
+</div>
+{% endblock %}
 {% block footer %}{% endblock %}
