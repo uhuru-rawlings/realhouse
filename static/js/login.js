@@ -23,8 +23,7 @@ const removeError = (clicked_id) =>{
     document.getElementById(clicked_id).style.borderColor = "#CED4DA";
 }
 
-const validateLogin = (event) =>{
-    event.preventDefault()
+const validateLogin = () =>{
     let username = document.getElementById("useremail");
     let password = document.getElementById("password");
     let rememberme = document.getElementById("password");
@@ -32,10 +31,10 @@ const validateLogin = (event) =>{
     if(username.value.trim() === '' || password.value.trim() === ''){
         if(username.value.trim() === ''){
             username.style.borderColor = 'red';
-            return
+            return false;
         }else{
             password.style.borderColor = 'red';
-            return
+            return false;
         }
     }else{
         if(rememberme.checked){
@@ -64,8 +63,7 @@ const setUser = () =>{
 window.onload= setUser;
 
 
-const validateSignup = (event) =>{
-    event.preventDefault()
+const validateSignup = () =>{
     let useremails = document.getElementById('useremails')
     let passwords = document.getElementById('passwords')
     let cpasswords = document.getElementById('cpasswords')
@@ -73,10 +71,19 @@ const validateSignup = (event) =>{
     if(useremails.value.trim() === '' || passwords.value.trim() === ''|| cpasswords.value.trim() === ''){
         if(useremails.value.trim() === ''){
             useremails.style.borderColor = "red";
+            return false;
         }else if(passwords.value.trim() === ''){
             passwords.style.borderColor = "red";
+            return false;
         }else{
             cpasswords.style.borderColor = "red";
+            return false;
+        }
+    }else{
+        if(passwords.value.trim() != cpasswords.value.trim()){
+            passwords.style.borderColor = "red";
+            cpasswords.style.borderColor = "red";
+            return false;
         }
     }
 }
