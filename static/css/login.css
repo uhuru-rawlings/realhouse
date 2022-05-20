@@ -3,6 +3,9 @@
 }
 .slideshowsection{
     width:50%;
+    height: 100%;
+    background-image: url(../assets/background3.jpg);
+    background-size: 100% 100%;
 }
 .loginform{
     width: 50%;
@@ -14,4 +17,35 @@
 }
 .loginform form{
     width: 70%;
+    margin: auto;
+}
+.loginform #submitbtn{
+    font-weight: bold;
+    font-size: 20px;
+}
+.loginform form .form-group{
+    margin-bottom: 10px;
+}
+.loginform form a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.loginform form .form-control{
+    height: 45px;
+}
+form h4{
+    font-weight: bold;
+}
+.darkbackground{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(34, 34, 34,0.6),rgba(90, 88, 88,0.2));
+}
+.darkbackground p{
+    position: absolute;
+    bottom: 20px;
+    margin: auto;
+    color:#fff;
+    margin-right: 20px;
+    margin-left: 20px;
 }

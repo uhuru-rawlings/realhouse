@@ -3,7 +3,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block body %}
-<div class="container" id="logincontainer">
+<div id="logincontainer">
     <div class="loginform">
         <form action="" method="post" autocomplete="off">
             <h4 class="text-center">Welcome back</h4>
@@ -18,11 +18,11 @@
                 <input type="password" name="password" id="password" class="form-control shadow-none" placeholder="Enter password">
             </div>
             <div class="form-group">
+                <a href="" class="text-center">forget password?</a>
                 <p><input type="checkbox" name="remeberme" id="remeberme">Remember me.</p>
-                <a href="">forget password?</a>
             </div>
             <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" id="submitbtn">
+                <input type="submit" style="width: 100%;" value="Login" class="btn btn-primary" id="submitbtn">
             </div>     
             <div class="form-group">
                 <p>Dont have account yet? <a href="">signup</a></p>
@@ -30,7 +30,9 @@
         </form>
     </div>
     <div class="slideshowsection">
-
+      <div class="darkbackground">
+          <p>By continuing to use this app, you agree to<a href="">Terms and condition</a>. We ensure data privacy and quality of services.</p>
+      </div>
     </div>
 </div>
 {% endblock %}
