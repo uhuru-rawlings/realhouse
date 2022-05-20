@@ -25,6 +25,7 @@
 }
 .loginform form .form-group{
     margin-bottom: 10px;
+    position: relative;
 }
 .loginform form a{
     text-decoration: none;
@@ -55,4 +56,13 @@ form h4{
     height: 100%;
     background-image: url(../assets/background4.jpg);
     background-size: 100% 100%;
+}
+.slideshowsections p a{
+    color: #fff;
+}
+.loginform form .form-group .seepass{
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
 }
