@@ -11,11 +11,11 @@
             {% csrf_token %}
             <div class="form-group">
                 <label for="useremail">Email Adress</label>
-                <input type="email" name="useremail" id="useremail" class="form-control shadow-none" placeholder="Enter usermane">
+                <input type="email" name="useremail" id="useremail" oninput="removeError(this.id)" class="form-control shadow-none" placeholder="Enter usermane">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="form-control shadow-none" placeholder="Enter password">
+                <input type="password" name="password" id="password" oninput="removeError(this.id)" class="form-control shadow-none" placeholder="Enter password">
                 <div class="seepass"><i onclick="tooglePasswordLogin()" class="fa-solid fa-eye"></i></div>
             </div>
             <div class="form-group">
