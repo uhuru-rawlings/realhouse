@@ -18,3 +18,20 @@ const tooglePasswordLogin = () =>{
         password.type = "password"
     }
 }
+
+const validateLogin = (event) =>{
+    event.preventDefault()
+    let username = document.getElementById("useremail");
+    let password = document.getElementById("password");
+    let rememberme = document.getElementById("password");
+
+    if(username.value.trim() === '' || password.value.trim() === ''){
+        if(username.value.trim() === ''){
+            username.style.borderColor = 'red';
+            return
+        }else{
+            password.style.borderColor = 'red';
+            return
+        }
+    }
+}

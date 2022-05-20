@@ -23,7 +23,7 @@
                 <p><input type="checkbox" name="remeberme" id="remeberme">Remember me.</p>
             </div>
             <div class="form-group">
-                <input type="submit" style="width: 100%;" value="Login" class="btn btn-primary" id="submitbtn">
+                <input type="submit" style="width: 100%;" value="Login" onclick="validateLogin(event)" class="btn btn-primary shadow-none" id="submitbtn">
             </div>     
             <div class="form-group">
                 <p>Dont have account yet? <a href="{% url 'signup' %}">signup</a></p>
