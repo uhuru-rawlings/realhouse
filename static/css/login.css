@@ -1,0 +1,17 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slideshowsection{
+    width:50%;
+}
+.loginform{
+    width: 50%;
+}
+#logincontainer{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.loginform form{
+    width: 70%;
+}
