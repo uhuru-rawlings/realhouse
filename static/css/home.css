@@ -78,6 +78,7 @@ nav .logos a{
 }
 .popularresidence{
     position: relative;
+
 }
 .popularresidence .container{
     padding-top: 100px;
@@ -125,17 +126,46 @@ nav .logos a{
     font-weight: 900;
     font-size: 14px;
 }
-.services{
-    height:300px;
-}
+/* .services{
+    height:200px;
+} */
 .services .container{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 .services .imagesside{
-    width: 50%;
+    width: 30%;
+    height: 200px;
 }
 .services .serviceside{
     width: 50%;
     padding: 10px;
 }
+.testimonials{
+    background-color: rgb(31, 31, 31);
+    color: #fff;
+}
+.testimonial_card{
+    display: flex;
+}
+.testimonial_card .images{
+    height: 70px;
+    width: 50px;
+}
+.testimonial_card .texts p::after{
+   content: '"';
+   font-size: 20px;
+}
+.testimonial_card .texts p::before{
+    content: '"';
+    font-size: 20px;
+ }
+ .popularresidence{
+     margin-bottom: 30px;
+ }
+ .flex_testimonials{
+     display: flex;
+     justify-content: space-between;
+     padding-top: 40px;
+     padding-bottom: 40px;
+ }
