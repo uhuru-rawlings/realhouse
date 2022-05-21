@@ -1,8 +1,11 @@
-from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # Create your views here.
 def homepage_view(request):
+    try:
+        user = request.COOKIES['userde']
+    except:
+        return redirect("/")
     context = {
         'title':'RealEstate - Home Page'
     }
@@ -10,7 +13,17 @@ def homepage_view(request):
 
 
 def houses_view(request):
+    try:
+        user = request.COOKIES['userde']
+    except:
+        return redirect("/")
     context = {
         'title':'RealEstate - Homes'
     }
     return render(request,"houses.html",context)
+
+
+def logout_view(request):
+    response = redirect('/')
+    response.delete_cookie("userde")
+    return response

@@ -9,9 +9,9 @@
         <a href="{% url 'home' %}" class="nav-link">Home</a>
         <a href="" class="nav-link">Features</a>
         <a href="" class="nav-link">About us</a>
-        <a href="" class="nav-link">Agents</a>
+        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
     </div>
     <div class="contactus">
-        <a href=""><button id="buttons">contact</button></a>
+        <a href="{% url 'contact' %}"><button id="buttons">contact</button></a>
     </div>
 </nav>
