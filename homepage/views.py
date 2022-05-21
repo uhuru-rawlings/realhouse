@@ -31,6 +31,6 @@ def logout_view(request):
 
 def about_view(request):
     context = {
-        'title':'RealEstate - Homes'
+        'title':'RealEstate - About us'
     }
     return render(request,"about.html", context)
