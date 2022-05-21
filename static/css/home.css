@@ -81,10 +81,10 @@ nav .logos a{
 
 }
 .popularresidence .container{
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .topwhite .container h4{
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .flex_cards{
     display: flex;
@@ -211,4 +211,15 @@ nav .logos a{
 }
 #toogleinput{
     display: none;
+}
+#searchhome{
+    padding-left: 20px;
+}
+.searchitems .form-group{
+    position: relative;
+}
+.searchitems .form-group .icons{
+    position: absolute;
+    right: 15px;
+    top: 10px;
 }

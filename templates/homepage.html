@@ -41,16 +41,20 @@
 </div>
 <div class="popularresidence">
     <div class="searchitems">
+        <h5 id="searchhome">Search your dream house</h5>
         <form action="" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <input type="text" name="location" id="location" class="form-control shadow-none" placeholder="Location">
+                <div class="icons"><i class="fa-solid fa-location-dot"></i></div>
             </div>
             <div class="form-group">
                 <input type="text" name="types" id="types" class="form-control shadow-none" placeholder="type">
+                <div class="icons"><i class="fa-solid fa-house"></i></div>
             </div>
             <div class="form-group">
                 <input type="number" name="price" id="price" class="form-control shadow-none" placeholder="price">
+                <div class="icons"><i class="fa-solid fa-dollar-sign"></i></div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Search Now" id="buttons">
@@ -62,7 +66,7 @@
             <div class="container">
                 <div class="flex_titles">
                     <h3>Our Popular Residence</h3>
-                    <div class="explore"><a href="">Explore All</a></div>
+                    <div class="explore"><a href="{% url 'houses' %}">Explore All</a></div>
                 </div>
                 <div class="flex_cards">
                     <div class="cards">
@@ -71,9 +75,9 @@
                         <div class="bottomdetails">
                             <div class="locations">location</div>
                             <div class="size">
-                                <div class="bedromms">4beds</div>
+                                <div class="bedromms"><i class="fa-solid fa-bed"></i>4beds</div>
                                 <div class="ttsize">10m * 10m</div>
-                                <div class="land">1500m<sup>2</sup></div>
+                                <div class="land"><i class="fa-solid fa-rectangle"></i>1500m<sup>2</sup></div>
                             </div>
                             <div class="flex_booknow">
                                 <button id="buttons">Book Now</button>
@@ -180,7 +184,7 @@
                     <img src="{% static 'assets/user2.jpg' %}" height="100px" width="100px" alt="">
                 </div>
                 <div class="texts">
-                    <div class="name text-center">Jane Doe</div>
+                    <div class="name text-center">John Doe</div>
                     <p>Secure and transparent. If you are looking to buy a house, consider this your first priority. I promise no dissapointments.</p>
                 </div>
             </div>
