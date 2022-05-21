@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-
+from django.contrib.auth.hashers import make_password
 from signup.models import Registration
 
 # Create your views here.
@@ -14,7 +14,7 @@ def signup_view(request):
         if userexist.exists():
             error = 'user with these details provided already exist.'
         else:
-            new_user = Registration(useremail = useremails, password = passwords)
+            new_user = Registration(useremail = useremails, password = make_password(passwords))
             new_user.save()
             return redirect("/")
     context = {
