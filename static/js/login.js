@@ -95,3 +95,11 @@ const validateTestimonial = (event) =>{
         targets.style.borderColor= "red";
     }
 }
+
+const closeTestimonials = () =>{
+    document.getElementById("toogleinput").style.display = "none";
+}
+
+const openTestimonials = () =>{
+    document.getElementById("toogleinput").style.display = "block";
+}

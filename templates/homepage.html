@@ -185,8 +185,8 @@
                 </div>
             </div>
         </div>
-        <div class="toogleinput">
-            <div class="close">&times;</div>
+        <div class="toogleinput" id="toogleinput">
+            <div class="close" onclick="closeTestimonials()">&times;</div>
             <form action="" method="post">
                 <div class="form-group">
                     <textarea name="testimony" id="testimony" oninput="removeError(this.id)" cols="30" rows="10" class="form-control shadow-none" placeholder="Type your text here"></textarea>
@@ -196,6 +196,7 @@
                 </div>
             </form>
         </div>
+        <p class="text-light addtesti" onclick="openTestimonials()">Add testimony</p>
     </div>
 </div>
 {% endblock %}

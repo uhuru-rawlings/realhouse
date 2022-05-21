@@ -205,3 +205,10 @@ nav .logos a{
     top: -15px;
     left: -15px;
 }
+.addtesti{
+    text-align: right;
+    cursor: pointer;
+}
+#toogleinput{
+    display: none;
+}
