@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'homepage',
     'signup',
     'resetpass',
+    'contact',
 ]
 
 MIDDLEWARE = [
