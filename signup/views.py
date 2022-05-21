@@ -10,7 +10,7 @@ def signup_view(request):
         useremails = request.POST['useremails']
         passwords = request.POST['passwords']
         
-        userexist = Registration.objects.get(useremail = useremails)
+        userexist = Registration.objects.filter(useremail = useremails)
         if userexist.exists():
             error = 'user with these details provided already exist.'
         else:
