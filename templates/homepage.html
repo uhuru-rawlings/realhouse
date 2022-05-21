@@ -5,6 +5,162 @@
 {% endblock %}
 
 {% block body %}
+<div class="bodybackg">
+    <div class="navsections">
+        <div class="container">
+            {% include 'navbar.html' %}
+        </div>
+    </div>
+    <div class="container welcomesection">
+        <div class="welcometexts">
+            <h1>Find Real Estate that suits you.</h1>
+            <div class="texts">We are commited to bringing you the most affordable land and 
+                estates that favours your pocket.
+            </div>
+            <div class="getstarted"><button id="buttons">get started</button></div>
+            <div class="deals">
+                <div class="housesold">
+                    <div class="numbrs text-center">450+</div>
+                    <div class="texts text-center">House Sold</div>
+                </div>
+                <div class="happycustome">
+                    <div class="numbrs text-center">270+</div>
+                    <div class="texts text-center">Happy Customers</div>
+                </div>
+                <div class="awards">
+                    <div class="numbrs text-center">11+</div>
+                    <div class="texts text-center">Awards Won</div>
+                </div>
+            </div>
+        </div>
+        <div class="welcomeimage">
+            {% load static %}
+            <img src="{% static 'assets/welcome.png' %}" width="100%" height="100%" alt="">
+        </div>
+    </div>
+</div>
+<div class="popularresidence">
+    <div class="searchitems">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="location" id="location" class="form-control shadow-none" placeholder="Location">
+            </div>
+            <div class="form-group">
+                <input type="text" name="types" id="types" class="form-control shadow-none" placeholder="type">
+            </div>
+            <div class="form-group">
+                <input type="number" name="price" id="price" class="form-control shadow-none" placeholder="price">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search Now" id="buttons">
+            </div>
+        </form>
+    </div>
+    <div class="containers">
+        <div class="topwhite">
+            <div class="container">
+                <div class="flex_titles">
+                    <h3>Our Popular Residence</h3>
+                    <div class="explore"><a href="">Explore All</a></div>
+                </div>
+                <div class="flex_cards">
+                    <div class="cards">
+                        {% load static %}
+                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+                        <div class="bottomdetails">
+                            <div class="locations">location</div>
+                            <div class="size">
+                                <div class="bedromms">4beds</div>
+                                <div class="ttsize">10m * 10m</div>
+                                <div class="land">1500m<sup>2</sup></div>
+                            </div>
+                            <div class="flex_booknow">
+                                <button id="buttons">Book Now</button>
+                                <div class="price">
+                                    5,600,800
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        {% load static %}
+                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+                        <div class="bottomdetails">
+                            <div class="locations">location</div>
+                            <div class="size">
+                                <div class="bedromms">4beds</div>
+                                <div class="ttsize">10m * 10m</div>
+                                <div class="land">1500m<sup>2</sup></div>
+                            </div>
+                            <div class="flex_booknow">
+                                <button id="buttons">Book Now</button>
+                                <div class="price">
+                                    5,600,800
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        {% load static %}
+                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+                        <div class="bottomdetails">
+                            <div class="locations">location</div>
+                            <div class="size">
+                                <div class="bedromms">4beds</div>
+                                <div class="ttsize">10m * 10m</div>
+                                <div class="land">1500m<sup>2</sup></div>
+                            </div>
+                            <div class="flex_booknow">
+                                <button id="buttons">Book Now</button>
+                                <div class="price">
+                                    5,600,800
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        {% load static %}
+                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+                        <div class="bottomdetails">
+                            <div class="locations">location</div>
+                            <div class="size">
+                                <div class="bedromms">4beds</div>
+                                <div class="ttsize">10m * 10m</div>
+                                <div class="land">1500m<sup>2</sup></div>
+                            </div>
+                            <div class="flex_booknow">
+                                <button id="buttons">Book Now</button>
+                                <div class="price">
+                                    5,600,800
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomblack">
+           
+        </div>
+    </div>
+    <div class="services">
+        <div class="container">
+            <div class="imagesside">
+                {% load static %}
+                <img src="{% static 'assets/images.jpg' %}" width="100%" height="100%" alt="">
+            </div>
+            <div class="serviceside">
+                <h4>Your comfort is our top priority</h4>
+                <p>
+                    We work in patnership with many real estate organisations to get the best at lower prices 
+                    home for our valued customers. We ensure all the bare minimum are put in place. That includes
+                    security, water, access to medical fercility.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}

@@ -60,7 +60,7 @@ const setUser = () =>{
     }
 }
 
-window.onload= setUser;
+window.onload = setUser;
 
 
 const validateSignup = () =>{

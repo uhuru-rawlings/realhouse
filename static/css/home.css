@@ -1,0 +1,141 @@
+body{
+    color: rgb(31, 31, 31);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brands a{
+    display: inline;
+    color: rgb(31, 31, 31);
+}
+nav .logos a{
+    height: 60px;
+    width: 60px;
+}
+#buttons{
+    background-color: rgb(31, 31, 31);
+    color: #fff;
+    border: none;
+    /* height: 40px; */
+    padding: 7px 14px 7px 14px;
+}
+.nav-brands a:hover{
+    color: rgb(31, 31, 31);
+}
+.welcomesection{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+}
+.welcometexts{
+    width: 40%;
+}
+.welcomeimage{
+    width: 60%;
+    z-index: 1;
+}
+.deals{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.deals .numbrs{
+    font-weight: bold;
+}
+.getstarted{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.bodybackg{
+    /* background-color: #AABCDB; */
+    background-color: #EFEFF7;
+}
+.searchitems{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 4px 4px 6px rgba(31, 31, 31,.3);
+    background-color: #fff;
+    z-index: 4;
+    position: absolute;
+    top: -40px;
+    right: 10%;
+    left: 10%;
+}
+.searchitems form{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.welcomeimage img{
+    z-index: 1;
+}
+.popularresidence{
+    position: relative;
+}
+.popularresidence .container{
+    padding-top: 100px;
+}
+.topwhite .container h4{
+    margin-top: 30px;
+}
+.flex_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;;
+}
+.flex_cards .cards{
+    width: 250px;
+    background-color: #fff;
+    transform: translateY(100px);
+}
+.bottomdetails{
+    margin: 7px 10px;
+}
+.flex_booknow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex_cards .size{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.bottomblack{
+    background-color: rgb(31, 31, 31);
+    height: 200px;
+}
+.container .flex_titles{
+    display: flex;
+    justify-content: space-between;
+}
+.container .flex_titles a{
+    font-size: 14px;
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+}
+.flex_booknow .price{
+    font-weight: 900;
+    font-size: 14px;
+}
+.services{
+    height:300px;
+}
+.services .container{
+    display: flex;
+    align-items: center;
+}
+.services .imagesside{
+    width: 50%;
+}
+.services .serviceside{
+    width: 50%;
+    padding: 10px;
+}

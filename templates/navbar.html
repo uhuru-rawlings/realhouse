@@ -1,14 +1,17 @@
 <nav>
     <div class="logos">
-        <a href=""></a>
+        <a href="{% url 'home' %}">
+            {% load static %}
+            <img src="{% static 'assets/homes.png'%}" width="60px" height="60px" alt="">
+        </a>
     </div>
     <div class="nav-brands">
-        <a href="" class="nav-link">Home</a>
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
         <a href="" class="nav-link">Features</a>
         <a href="" class="nav-link">About us</a>
         <a href="" class="nav-link">Agents</a>
     </div>
     <div class="contactus">
-        <a href=""><button>contact</button></a>
+        <a href=""><button id="buttons">contact</button></a>
     </div>
 </nav>
