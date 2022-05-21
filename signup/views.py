@@ -1,10 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+
+from signup.models import Registration
 
 # Create your views here.
 def signup_view(request):
+    error = ''
+    success = ''
     if request.method == 'POST':
         useremails = request.POST['useremails']
         passwords = request.POST['passwords']
+        
+        userexist = Registration.objects.get(useremail = useremails)
+        if userexist.exists():
+            error = 'user with these details provided already exist.'
+        else:
+            new_user = Registration(useremail = useremails, password = passwords)
+            new_user.save()
+            return redirect("/")
     context = {
         'title':'RealEstate - Signup'
     }
