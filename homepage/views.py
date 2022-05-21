@@ -27,3 +27,10 @@ def logout_view(request):
     response = redirect('/')
     response.delete_cookie("userde")
     return response
+
+
+def about_view(request):
+    context = {
+        'title':'RealEstate - Homes'
+    }
+    return render(request,"about.html", context)
