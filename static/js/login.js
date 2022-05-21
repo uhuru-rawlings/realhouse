@@ -87,3 +87,11 @@ const validateSignup = () =>{
         }
     }
 }
+
+const validateTestimonial = (event) =>{
+    event.preventDefault()
+    let targets = document.getElementById("testimony")
+    if(targets.value.trim() === ''){
+        targets.style.borderColor= "red";
+    }
+}

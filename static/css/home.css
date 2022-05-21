@@ -149,8 +149,16 @@ nav .logos a{
     display: flex;
 }
 .testimonial_card .images{
-    height: 70px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.testimonial_card .images img{
+    border-radius: 50%;
+}
+.testimonial_card .texts p{
+    font-style: italic;
 }
 .testimonial_card .texts p::after{
    content: '"';
@@ -169,3 +177,31 @@ nav .logos a{
      padding-top: 40px;
      padding-bottom: 40px;
  }
+ .toogleinput{
+     width: 60%;
+     margin: auto;
+     padding: 20px;
+     background-color: #fff;
+     position: relative;
+ }
+.toogleinput #testimony{
+    height: 100px;
+    resize: none;
+}
+.toogleinput .form-group{
+    margin-bottom: 10px;
+}
+.toogleinput .close{
+    color: rgb(31, 31, 31);
+    background-color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding-left: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
