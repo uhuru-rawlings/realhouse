@@ -225,16 +225,23 @@ nav .logos a{
 }
 .flex_contactdetails{
     display: flex;
+    height: 70vh;
 }
 .flex_contactdetails .contactinfo{
-    width:30%;
+    width: 40%;
+    height: 100%;
+    position: relative;
 }
 .flex_contactdetails .contactinfo a{
     text-decoration: none;
     color: rgb(31, 31, 31);
 }
 .flex_contactdetails .contactform{
-    width: 70%;
+    width: 60%;
+    height: 100%;
+}
+.flex_contactdetails .contactform .form-group{
+    margin-bottom: 10px;
 }
 .flex_inputs{
     display: flex;
@@ -242,4 +249,34 @@ nav .logos a{
 }
 .flex_inputs .form-group{
     width: 100%;
+}
+.flex_contactdetails .contactform textarea{
+    height: 100px;
+    resize: none;
+}
+.flex_inputs .input-group{
+    width: 45%;
+}
+.contactus{
+    margin-top: 40px;
+}
+.socialicons{
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+    left: 10%;
+    font-size: 20px;
+}
+.socialicons a{
+    margin-right: 20px;
+}
+.contactinfo .contacts a #iconsleft{
+    margin-right: 15px;
+}
+.flex_contactdetails i{
+    font-size: 30px;
+}
+.navsections{
+    box-shadow: 4px 4px 6px #EFEFF7;
+    padding-bottom: 10px;
 }

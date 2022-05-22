@@ -122,3 +122,30 @@ const validateSearch = () =>{
         }
     }
 }
+
+const validatContact = () =>{
+    let firstname = document.getElementById("firstname");
+    let lastname = document.getElementById("lastname");
+    let emailadress = document.getElementById("emailadress");
+    let phonenumber = document.getElementById("phonenumber");
+    let messages = document.getElementById("messages");
+
+    if(firstname.value.trim() === '' || lastname.value.trim() === '' || emailadress.value.trim() === '' || phonenumber.value.trim() === '' || messages.value.trim() === ''){
+        if(firstname.value.trim() === ''){
+            firstname.style.borderColor = "red";
+            return false;
+        }else if(lastname.value.trim() === ''){
+            lastname.style.borderColor = "red";
+            return false;
+        }else if(emailadress.value.trim() === ''){
+            emailadress.style.borderColor = "red";
+            return false;
+        }else if(phonenumber.value.trim() === ''){
+            phonenumber.style.borderColor = "red";
+            return false;
+        }else{
+            messages.style.borderColor = "red";
+            return false;
+        }
+    }
+}
