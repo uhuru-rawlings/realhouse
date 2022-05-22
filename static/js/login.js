@@ -103,3 +103,22 @@ const closeTestimonials = () =>{
 const openTestimonials = () =>{
     document.getElementById("toogleinput").style.display = "block";
 }
+
+const validateSearch = () =>{
+    let location = document.getElementById("location")
+    let types = document.getElementById("types")
+    let price = document.getElementById("price")
+
+    if(location.value.trim() === '' || types.value.trim() === '' || price.value.trim() === ''){
+        if(location.value.trim() === ''){
+            location.style.borderColor = "red";
+            return false;
+        }else if(types.value.trim() === ''){
+            types.style.borderColor = "red";
+            return false;
+        }else{
+            price.style.borderColor = "red";
+            return false;
+        }
+    }
+}

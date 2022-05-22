@@ -223,3 +223,23 @@ nav .logos a{
     right: 15px;
     top: 10px;
 }
+.flex_contactdetails{
+    display: flex;
+}
+.flex_contactdetails .contactinfo{
+    width:30%;
+}
+.flex_contactdetails .contactinfo a{
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+}
+.flex_contactdetails .contactform{
+    width: 70%;
+}
+.flex_inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.flex_inputs .form-group{
+    width: 100%;
+}

@@ -45,19 +45,19 @@
         <form action="" method="post">
             {% csrf_token %}
             <div class="form-group">
-                <input type="text" name="location" id="location" class="form-control shadow-none" placeholder="Location">
+                <input type="text" name="location" oninput="removeError(this.id)" id="location" class="form-control shadow-none" placeholder="Location">
                 <div class="icons"><i class="fa-solid fa-location-dot"></i></div>
             </div>
             <div class="form-group">
-                <input type="text" name="types" id="types" class="form-control shadow-none" placeholder="type">
+                <input type="text" name="types" oninput="removeError(this.id)" id="types" class="form-control shadow-none" placeholder="type">
                 <div class="icons"><i class="fa-solid fa-house"></i></div>
             </div>
             <div class="form-group">
-                <input type="number" name="price" id="price" class="form-control shadow-none" placeholder="price">
+                <input type="number" name="price" oninput="removeError(this.id)" id="price" class="form-control shadow-none" placeholder="price">
                 <div class="icons"><i class="fa-solid fa-dollar-sign"></i></div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Search Now" id="buttons">
+                <input type="submit" value="Search Now" onclick="return validateSearch()" id="buttons">
             </div>
         </form>
     </div>
