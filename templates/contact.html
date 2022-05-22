@@ -28,6 +28,7 @@
         <div class="contactform">
             <form action="" method="post" autocomplete="off">
                 {% csrf_token %}
+                <div class="text-success">{{ success }}</div>
                 <div class="flex_inputs">
                     <div class="input-group">
                         <div class="form-group">
