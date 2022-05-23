@@ -11,6 +11,7 @@ class Houses(models.Model):
     interiorimage1 = models.ImageField(upload_to = 'images')
     interiorimage2 = models.ImageField(upload_to = 'images')
     exteriorimage = models.ImageField(upload_to = 'images')
+    description = models.CharField(max_length=7000, default="No description")
 
     class Meta:
         db_table = 'Houses'

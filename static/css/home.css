@@ -293,3 +293,6 @@ nav .logos a{
 #aboutus h5{
     font-weight: bold;
 }
+.homes .flex_cards .cards:hover{
+    box-shadow: 4px 4px 8px rgba(31, 31, 31,.3);
+}

@@ -69,78 +69,26 @@
                     <div class="explore"><a href="{% url 'houses' %}">Explore All</a></div>
                 </div>
                 <div class="flex_cards">
+                    {% for house in homes %}
                     <div class="cards">
                         {% load static %}
                         <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
                         <div class="bottomdetails">
-                            <div class="locations">location</div>
+                            <div class="locations">{{ house.location }}</div>
                             <div class="size">
-                                <div class="bedromms"><i class="fa-solid fa-bed"></i>4beds</div>
-                                <div class="ttsize">10m * 10m</div>
-                                <div class="land"><i class="fa-solid fa-rectangle"></i>1500m<sup>2</sup></div>
+                                <div class="bedromms"><i class="fa-solid fa-bed"></i>{{ house.bedrooms }}beds</div>
+                                <div class="ttsize">{{ house.lengthofhouse }}m * {{ house.widthofhouse }}m</div>
+                                <div class="land"><i class="fa-solid fa-rectangle"></i>{{ house.areaofland }}m<sup>2</sup></div>
                             </div>
                             <div class="flex_booknow">
-                                <button id="buttons">Book Now</button>
+                                <button id="buttons">See Details</button>
                                 <div class="price">
-                                    5,600,800
+                                    {{ house.price }}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="cards">
-                        {% load static %}
-                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
-                        <div class="bottomdetails">
-                            <div class="locations">location</div>
-                            <div class="size">
-                                <div class="bedromms">4beds</div>
-                                <div class="ttsize">10m * 10m</div>
-                                <div class="land">1500m<sup>2</sup></div>
-                            </div>
-                            <div class="flex_booknow">
-                                <button id="buttons">Book Now</button>
-                                <div class="price">
-                                    5,600,800
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        {% load static %}
-                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
-                        <div class="bottomdetails">
-                            <div class="locations">location</div>
-                            <div class="size">
-                                <div class="bedromms">4beds</div>
-                                <div class="ttsize">10m * 10m</div>
-                                <div class="land">1500m<sup>2</sup></div>
-                            </div>
-                            <div class="flex_booknow">
-                                <button id="buttons">Book Now</button>
-                                <div class="price">
-                                    5,600,800
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        {% load static %}
-                        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
-                        <div class="bottomdetails">
-                            <div class="locations">location</div>
-                            <div class="size">
-                                <div class="bedromms">4beds</div>
-                                <div class="ttsize">10m * 10m</div>
-                                <div class="land">1500m<sup>2</sup></div>
-                            </div>
-                            <div class="flex_booknow">
-                                <button id="buttons">Book Now</button>
-                                <div class="price">
-                                    5,600,800
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

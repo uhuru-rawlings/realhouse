@@ -1,13 +1,15 @@
 from django.shortcuts import redirect, render
-
+from homepage.models import Houses
 # Create your views here.
 def homepage_view(request):
     try:
         user = request.COOKIES['userde']
     except:
         return redirect("/")
+    homes = Houses.objects.all()
     context = {
-        'title':'RealEstate - Home Page'
+        'title':'RealEstate - Home Page',
+        'homes':homes,
     }
     return render(request,"homepage.html",context)
 
@@ -17,8 +19,10 @@ def houses_view(request):
         user = request.COOKIES['userde']
     except:
         return redirect("/")
+    homes = Houses.objects.all()
     context = {
-        'title':'RealEstate - Homes'
+        'title':'RealEstate - Homes',
+        'homes':homes,
     }
     return render(request,"houses.html",context)
 
@@ -34,3 +38,12 @@ def about_view(request):
         'title':'RealEstate - About us'
     }
     return render(request,"about.html", context)
+
+
+def details_view(request,id):
+    homes = Houses.objects.filter(id =id)
+    context = {
+        'title':'RealEstate - Details',
+        'house':homes
+    }
+    return render(request,"details.html", context)
