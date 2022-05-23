@@ -39,7 +39,7 @@
     {% endif %}
     <div class="checkavailability" id="checkavailability">
         
-        <form action="" method="post">
+        <form action="{% url 'availability' %}" method="post">
             <div class="close" onclick="closeCheckAvailability()">&times;</div>
             <p>Fill the following form, we will get to you using the details provided.</p>
             <p class="text-danger">Make sure you provide the right details.</p>

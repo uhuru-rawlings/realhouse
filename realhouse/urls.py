@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from login.views import login_view
 from signup.views import signup_view
-from homepage.views import homepage_view,houses_view,logout_view,about_view,details_view
+from homepage.views import homepage_view,houses_view,logout_view,about_view,details_view,checkavailability_view
 from contact.views import contact_view
 
 from django.conf.urls.static import static
@@ -31,6 +31,7 @@ urlpatterns = [
     path('home/houses/', houses_view , name="houses"),
     path('home/logout/', logout_view , name="logout"),
     path('home/about/', about_view , name="about"),
+    path('home/availability/', checkavailability_view , name="availability"),
     path('home/details/<int:id>/', details_view , name="details"),
     path('houses/contact/', contact_view , name="contact"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from homepage.models import Houses
+from homepage.models import Houses,Availability
 from django.db.models import Q
 # Create your views here.
 def homepage_view(request):
@@ -61,3 +61,14 @@ def details_view(request,id):
         'texts':texts
     }
     return render(request,"details.html", context)
+
+def checkavailability_view(request):
+    if request.method == 'POST':
+        useremails = request.POST['useremails']
+        telephoneno = request.POST['telephoneno']
+        availabilitymessage = request.POST['availabilitymessage']
+
+        new_check = Availability(useremails = useremails,telephoneno = telephoneno,availabilitymessage = availabilitymessage)
+        new_check.save()
+
+        return redirect('houses')
