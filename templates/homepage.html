@@ -17,7 +17,7 @@
             <div class="texts">We are commited to bringing you the most affordable land and 
                 estates that favours your pocket.
             </div>
-            <div class="getstarted"><button id="buttons">get started</button></div>
+            <div class="getstarted"><a href="{% url 'house' %}"><button id="buttons">get started</button></a></div>
             <div class="deals">
                 <div class="housesold">
                     <div class="numbrs text-center">450+</div>
@@ -63,8 +63,7 @@
             <div class="form-group">
                 <select name="price" style="width:250px;" id="price" oninput="removeError(this.id)" class="form-control shadow-none">
                     {% for home in homes %}
-                    {% load humanize %}
-                    <option value="{{ home.price | intcomma }}">{{ home.price | intcomma }}</option>
+                    <option value="{{ home.price }}">{{ home.price }}</option>
                     {% endfor %}</select>
                 <div class="icons"><i class="fa-solid fa-dollar-sign"></i></div>
             </div>

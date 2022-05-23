@@ -8,8 +8,8 @@
     </div>
 </div>
 {% if posts != '' %}
-<div class="homes container">
-    <h3>Search Result</h3>
+<div class="homess container" style="margin-bottom: 20px;">
+    <h4>Search Result</h4>
     <div class="flex_cards">
         {% for house in searchhomes %}
         <div class="cards">
@@ -36,6 +36,7 @@
 </div>
 {% endif %}
 <div class="homes container">
+    <h4 class="text-center">Available Homes</h4>
     <div class="flex_cards">
         {% for house in homes %}
         <div class="cards">

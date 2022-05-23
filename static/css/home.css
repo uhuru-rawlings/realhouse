@@ -131,6 +131,7 @@ nav .logos a{
 } */
 .services .container{
     display: flex;
+    flex-wrap: wrap;
     /* align-items: center; */
 }
 .services .imagesside{
@@ -147,6 +148,7 @@ nav .logos a{
 }
 .testimonial_card{
     display: flex;
+    flex-wrap: wrap;
 }
 .testimonial_card .images{
     height: 100px;
@@ -173,6 +175,7 @@ nav .logos a{
  }
  .flex_testimonials{
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-between;
      padding-top: 40px;
      padding-bottom: 40px;
@@ -225,6 +228,7 @@ nav .logos a{
 }
 .flex_contactdetails{
     display: flex;
+    flex-wrap: wrap;
     height: 70vh;
 }
 .flex_contactdetails .contactinfo{
@@ -298,6 +302,7 @@ nav .logos a{
 }
 .flex_images{
     display: flex;
+    flex-wrap: wrap;
 }
 .checkavailability form .form-group{
     margin-bottom: 15px;
