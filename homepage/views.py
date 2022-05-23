@@ -7,7 +7,7 @@ def homepage_view(request):
         user = request.COOKIES['userde']
     except:
         return redirect("/")
-    homes = Houses.objects.all()
+    homes = Houses.objects.all().order_by('-id')[:4]
     context = {
         'title':'RealEstate - Home Page',
         'homes':homes,

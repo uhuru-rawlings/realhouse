@@ -111,7 +111,7 @@ nav .logos a{
 }
 .bottomblack{
     background-color: rgb(31, 31, 31);
-    height: 200px;
+    min-height: 200px;
 }
 .container .flex_titles{
     display: flex;
@@ -148,7 +148,7 @@ nav .logos a{
 }
 .testimonial_card{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .testimonial_card .images{
     height: 100px;
@@ -159,14 +159,14 @@ nav .logos a{
 .testimonial_card .images img{
     border-radius: 50%;
 }
-.testimonial_card .texts p{
+.testimonial_card .texts span{
     font-style: italic;
 }
-.testimonial_card .texts p::after{
+.testimonial_card .texts span::after{
    content: '"';
    font-size: 20px;
 }
-.testimonial_card .texts p::before{
+.testimonial_card .texts span::before{
     content: '"';
     font-size: 20px;
  }
@@ -175,7 +175,7 @@ nav .logos a{
  }
  .flex_testimonials{
      display: flex;
-     flex-wrap: wrap;
+     /* flex-wrap: wrap; */
      justify-content: space-between;
      padding-top: 40px;
      padding-bottom: 40px;
@@ -342,4 +342,14 @@ nav .logos a{
     transform: translate(-30px ,-30px);
     background-color: #fff;
     cursor: pointer;
+}
+
+@media screen and (max-width: 930px){
+    .welcomeimage{
+        display: none;
+    }
+    .welcometexts{
+        width: 70%;
+        margin: auto;
+    }
 }

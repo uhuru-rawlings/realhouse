@@ -17,7 +17,7 @@
             <div class="texts">We are commited to bringing you the most affordable land and 
                 estates that favours your pocket.
             </div>
-            <div class="getstarted"><a href="{% url 'house' %}"><button id="buttons">get started</button></a></div>
+            <div class="getstarted"><a href="{% url 'houses' %}"><button id="buttons">get started</button></a></div>
             <div class="deals">
                 <div class="housesold">
                     <div class="numbrs text-center">450+</div>
@@ -44,24 +44,24 @@
         <h5 id="searchhome">Search your dream house</h5>
         <form action="{% url 'houses' %}" method="post">
             {% csrf_token %}
-            <div class="form-group">
-                <select name="location" style="width:250px;" id="location" oninput="removeError(this.id)" class="form-control shadow-none">
+            <div class="form-group" style="width: 25%;">
+                <select name="location" style="width:100%;" id="location" oninput="removeError(this.id)" class="form-control shadow-none">
                     {% for home in homes %}
                     <option value="{{ home.location }}">{{ home.location }}</option>
                     {% endfor %}
                 </select>
                 <div class="icons"><i class="fa-solid fa-location-dot"></i></div>
             </div>
-            <div class="form-group">
-                <select name="types" style="width:250px;" id="types" oninput="removeError(this.id)" class="form-control shadow-none">
+            <div class="form-group" style="width: 25%;">
+                <select name="types" style="width:100%;" id="types" oninput="removeError(this.id)" class="form-control shadow-none">
                     {% for home in homes %}
                     <option value="{{ home.location }}">{{ home.choices }}</option>
                     {% endfor %}
                 </select>
                 <div class="icons"><i class="fa-solid fa-house"></i></div>
             </div>
-            <div class="form-group">
-                <select name="price" style="width:250px;" id="price" oninput="removeError(this.id)" class="form-control shadow-none">
+            <div class="form-group" style="width: 25%;">
+                <select name="price" style="width:100%;" id="price" oninput="removeError(this.id)" class="form-control shadow-none">
                     {% for home in homes %}
                     <option value="{{ home.price }}">{{ home.price }}</option>
                     {% endfor %}</select>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="texts">
                     <div class="name text-center">Jane Doe</div>
-                    <p>The pain of processing land required documents get simplified. This is where i got my current home.</p>
+                    <span>The pain of processing land required documents get simplified. This is where i got my current home.</span>
                 </div>
             </div>
             <div class="testimonial_card">
@@ -145,7 +145,7 @@
                 </div>
                 <div class="texts">
                     <div class="name text-center">John Doe</div>
-                    <p>Secure and transparent. If you are looking to buy a house, consider this your first priority. I promise no dissapointments.</p>
+                    <span>Secure and transparent. If you are looking to buy a house, consider this your first priority. I promise no dissapointments.</span>
                 </div>
             </div>
         </div>
