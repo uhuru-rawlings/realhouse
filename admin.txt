@@ -1,2 +1,9 @@
 password:admin
-username:test@gmail.com
+email:test@gmail.com
+username: admin
+
+
+Exterior
+Interior *2
+price
+amenities{receretional,helthcare,education}

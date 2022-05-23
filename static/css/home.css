@@ -290,3 +290,6 @@ nav .logos a{
 #aboutus{
     margin-top: 30px;
 }
+#aboutus h5{
+    font-weight: bold;
+}
