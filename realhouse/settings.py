@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'signup',
     'resetpass',
     'contact',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

@@ -24,7 +24,8 @@
             </div>
             <div class="flex_booknow">
                 <div class="prices">
-                    <span class="bolds" style="font-weight: bold;">price:</span> {{ house.price }}
+                    {% load humanize %}
+                    <span class="bolds" style="font-weight: bold;">price:</span> {{ house.price | intcomma }}
                 </div>
             </div>
             <div class="description">

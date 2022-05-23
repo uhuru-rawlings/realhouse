@@ -42,7 +42,7 @@
 <div class="popularresidence">
     <div class="searchitems">
         <h5 id="searchhome">Search your dream house</h5>
-        <form action="" method="post">
+        <form action="{% url 'houses' %}" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <select name="location" style="width:250px;" id="location" oninput="removeError(this.id)" class="form-control shadow-none">
@@ -63,7 +63,8 @@
             <div class="form-group">
                 <select name="price" style="width:250px;" id="price" oninput="removeError(this.id)" class="form-control shadow-none">
                     {% for home in homes %}
-                    <option value="{{ home.price }}">{{ home.price }}</option>
+                    {% load humanize %}
+                    <option value="{{ home.price | intcomma }}">{{ home.price | intcomma }}</option>
                     {% endfor %}</select>
                 <div class="icons"><i class="fa-solid fa-dollar-sign"></i></div>
             </div>
@@ -94,7 +95,8 @@
                             <div class="flex_booknow">
                                 <a href="{% url 'details' house.id %}"><button id="buttons">See Details</button></a>
                                 <div class="price">
-                                    {{ house.price }}
+                                    {% load humanize %}
+                                    {{ house.price | intcomma }}
                                 </div>
                             </div>
                         </div>

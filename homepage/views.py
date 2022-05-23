@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from homepage.models import Houses
+from django.db.models import Q
 # Create your views here.
 def homepage_view(request):
     try:
@@ -20,9 +21,20 @@ def houses_view(request):
     except:
         return redirect("/")
     homes = Houses.objects.all()
+    posts = ''
+    searchhomes = ''
+    if request.method == 'POST':
+        location = request.POST['location']
+        types = request.POST['types']
+        price = request.POST['price']
+
+        searchhomes = Houses.objects.filter(Q(location = location) | Q(price = price) | Q(choices = types))
+        posts = 'posted'
     context = {
         'title':'RealEstate - Homes',
         'homes':homes,
+        'posts':posts,
+        'searchhomes':searchhomes
     }
     return render(request,"houses.html",context)
 

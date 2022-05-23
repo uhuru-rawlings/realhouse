@@ -2,15 +2,15 @@ from django.db import models
 
 # Create your models here.
 class Houses(models.Model):
-    HOUSE_TYPE = [("Single-Family Homes",("Single-Family Homes")),
-                 ("Semi-Detached Home",("Semi-Detached Home")),
-                 ("Multifamily Homes",("Multifamily Homes")),
-                 ("Townhomes",("Townhomes")),
-                 ("Apartments",("Apartments")),
-                 ("Condominiums",("Condominiums")),
-                 ("Co-Ops",("Co-Ops")),
-                 ("Tiny Home ",("Tiny Home ")),
-                 ("Mobile Home",("Mobile Home")),
+    HOUSE_TYPE = [("Single-Family Homes","Single-Family Homes"),
+                 ("Semi-Detached Home","Semi-Detached Home"),
+                 ("Multifamily Homes","Multifamily Homes"),
+                 ("Townhomes","Townhomes"),
+                 ("Apartments","Apartments"),
+                 ("Condominiums","Condominiums"),
+                 ("Co-Ops","Co-Ops"),
+                 ("Tiny Home ","Tiny Home "),
+                 ("Mobile Home","Mobile Home"),
     ]
     location = models.CharField(max_length=100)
     bedrooms = models.IntegerField()
