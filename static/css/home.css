@@ -296,3 +296,45 @@ nav .logos a{
 .homes .flex_cards .cards:hover{
     box-shadow: 4px 4px 8px rgba(31, 31, 31,.3);
 }
+.flex_images{
+    display: flex;
+}
+.checkavailability form .form-group{
+    margin-bottom: 15px;
+}
+.checkavailability form{
+    width: 40%;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(31, 31, 31,.3);
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+.checkavailability{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31,.5);
+}
+.checkavailability textarea{
+    height: 100px;
+}
+/* #details{
+    position: relative;
+} */
+.checkavailability .close{
+    border: 1px solid rgb(31, 31, 31);
+    padding-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-top: 3px;
+    transform: translate(-30px ,-30px);
+    background-color: #fff;
+    cursor: pointer;
+}

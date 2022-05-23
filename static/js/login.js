@@ -149,3 +149,31 @@ const validatContact = () =>{
         }
     }
 }
+
+const validateAvailability = () =>{
+    let useremails = document.getElementById("useremails");
+    let telephoneno = document.getElementById("telephoneno");
+    let availabilitymessage = document.getElementById("availabilitymessage");
+
+    if(useremails.value.trim() === '' || telephoneno.value.trim() === '' || availabilitymessage.value.trim() === ''){
+        if(useremails.value.trim() === ''){
+            useremails.style.borderColor = "red";
+            return false;
+        }else if(telephoneno.value.trim() === ''){
+            telephoneno.style.borderColor = "red";
+            return false;
+        }else{
+            availabilitymessage.style.borderColor = "red";
+            return false;
+        }
+    }
+}
+
+const closeCheckAvailability = () =>{
+    document.getElementById("checkavailability").style.display = "none";
+}
+
+
+const openCheckAvailability = () =>{
+    document.getElementById("checkavailability").style.display = "block";
+}

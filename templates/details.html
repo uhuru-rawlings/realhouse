@@ -7,27 +7,59 @@
         {% include 'navbar.html' %}
     </div>
 </div>
-<div class="container"id="details">
+<div class="container"id="details" style="margin-top: 40px;">
     {% if house %}
     <div class="cards">
         {% load static %}
-        <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+        <div class="flex_images">
+            <img src="{{ house.exteriorimage.url }}" width="50%" height="250px" alt="">
+            <img src="{{ house.interiorimage1.url }}" width="50%" height="250px" alt="">
+        </div>
         <div class="bottomdetails">
-            <div class="locations">{{ house.location }}</div>
+            <div class="locations"><span class="bolds" style="font-weight: bold;">Location:</span> {{ house.location }}</div>
             <div class="size">
-                <div class="bedromms"><i class="fa-solid fa-bed"></i>{{ house.bedrooms }}beds</div>
-                <div class="ttsize">{{ house.lengthofhouse }}m * {{ house.widthofhouse }}m</div>
-                <div class="land"><i class="fa-solid fa-rectangle"></i>{{ house.areaofland }}m<sup>2</sup></div>
+                <div class="bedromms"><span class="bolds" style="font-weight: bold;">Bedrooms:</span> {{ house.bedrooms }} bed</div>
+                <div class="ttsize"><span class="bolds" style="font-weight: bold;">House area:</span> {{ house.lengthofhouse }}m * {{ house.widthofhouse }}m</div>
+                <div class="land"><span class="bolds" style="font-weight: bold;">Land area:</span> {{ house.areaofland }}m<sup>2</sup></div>
             </div>
             <div class="flex_booknow">
-                <button id="buttons">See Details</button>
-                <div class="price">
-                    {{ house.price }}
+                <div class="prices">
+                    <span class="bolds" style="font-weight: bold;">price:</span> {{ house.price }}
                 </div>
+            </div>
+            <div class="description">
+                <span class="bolds" style="font-weight: bold;">description:</span> {{ house.description }}
+            </div>
+            <div class="checkavailabilities">
+                <button id="buttons" onclick="openCheckAvailability()">Check Availability</button>
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endif %}
+    <div class="checkavailability" id="checkavailability">
+        
+        <form action="" method="post">
+            <div class="close" onclick="closeCheckAvailability()">&times;</div>
+            <p>Fill the following form, we will get to you using the details provided.</p>
+            <p class="text-danger">Make sure you provide the right details.</p>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="useremails"><span class="text-danger">*</span>User Email</label>
+                <input type="email" name="useremails" oninput="removeError(this.id)" id="useremails" class="form-control shadow-none" placeholder="Enter Email Adress">
+            </div>
+            <div class="form-group">
+                <label for="telephoneno"><span class="text-danger">*</span>Phone Number</label>
+                <input type="tel" name="telephoneno" oninput="removeError(this.id)" id="telephoneno" class="form-control shadow-none" placeholder="Enter phone number">
+            </div>
+            <div class="form-group">
+                <label for="availabilitymessage"><span class="text-danger">*</span>Availability Message</label>
+                <textarea name="availabilitymessage" oninput="removeError(this.id)" value="{{ texts }}" id="availabilitymessage" cols="30" rows="10" class="form-control shadow-none"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Message" onclick="return validateAvailability()" id="buttons">
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
 {% block footer %}{% endblock %}

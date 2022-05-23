@@ -12,16 +12,16 @@
         {% for house in homes %}
         <div class="cards">
             {% load static %}
-            <img src="{% static 'assets/background4.jpg' %}" width="100%" height="150px" alt="">
+            <img src="{{ house.exteriorimage.url }}" width="100%" height="150px" alt="">
             <div class="bottomdetails">
                 <div class="locations">{{ house.location }}</div>
                 <div class="size">
-                    <div class="bedromms"><i class="fa-solid fa-bed"></i>{{ house.bedrooms }}beds</div>
+                    <div class="bedromms"><i class="fa-solid fa-bed"></i>{{ house.bedrooms }} bed</div>
                     <div class="ttsize">{{ house.lengthofhouse }}m * {{ house.widthofhouse }}m</div>
                     <div class="land"><i class="fa-solid fa-rectangle"></i>{{ house.areaofland }}m<sup>2</sup></div>
                 </div>
                 <div class="flex_booknow">
-                    <button id="buttons">See Details</button>
+                    <a href="{% url 'details' house.id %}"><button id="buttons">See Details</button></a>
                     <div class="price">
                         {{ house.price }}
                     </div>

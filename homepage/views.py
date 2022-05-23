@@ -41,9 +41,11 @@ def about_view(request):
 
 
 def details_view(request,id):
-    homes = Houses.objects.filter(id =id)
+    homes = Houses.objects.get(id = id)
+    texts = 'I saw this nice home at realestate and i am interested. can we link up?'
     context = {
         'title':'RealEstate - Details',
-        'house':homes
+        'house':homes,
+        'texts':texts
     }
     return render(request,"details.html", context)
